@@ -410,6 +410,9 @@ nni_plat_init(int (*helper)(void))
 		return (rv);
 	}
 
+
+	//TODO not supported in SylixOS
+#if 0
 	if (pthread_atfork(NULL, NULL, nni_atfork_child) != 0) {
 		pthread_mutex_unlock(&nni_plat_init_lock);
 		nni_posix_resolv_sysfini();
@@ -419,6 +422,8 @@ nni_plat_init(int (*helper)(void))
 		pthread_attr_destroy(&nni_thrattr);
 		return (NNG_ENOMEM);
 	}
+#endif
+
 	if ((rv = helper()) == 0) {
 		nni_plat_inited = 1;
 	}

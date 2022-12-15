@@ -170,6 +170,9 @@ resolv_task(resolv_item *item)
 
 	// We can pass any non-zero service number, but we have to pass
 	// *something*, in case we are using a NULL hostname.
+	hints.ai_family |= AF_INET;
+	hints.ai_flags = AI_CANONNAME;
+
 	if ((rv = getaddrinfo(item->host, item->serv, &hints, &results)) !=
 	    0) {
 		rv = posix_gai_errno(rv);

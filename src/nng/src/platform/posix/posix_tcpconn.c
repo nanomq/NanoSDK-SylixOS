@@ -66,24 +66,25 @@ tcp_dowrite(nni_tcp_conn *c)
 		hdr.msg_iovlen = niov;
 		hdr.msg_iov    = iovec;
 
-		if ((n = sendmsg(fd, &hdr, MSG_NOSIGNAL)) < 0) {
-			switch (errno) {
-			case EINTR:
-				continue;
-			case EAGAIN:
+//		if ((n = sendmsg(fd, &hdr, MSG_NOSIGNAL)) < 0) {  // NOTE: incompatible with SylixOS
+
+		if ((n = sendmsg(fd, &hdr, 0)) < 0) {
+            switch (errno) {
+            case EINTR:
+                continue;
+            case EAGAIN:
 #ifdef EWOULDBLOCK
 #if EWOULDBLOCK != EAGAIN
 			case EWOULDBLOCK:
 #endif
 #endif
-				return;
-			default:
-				nni_aio_list_remove(aio);
-				nni_aio_finish_error(
-				    aio, nni_plat_errno(errno));
-				return;
-			}
-		}
+                return;
+            default:
+                nni_aio_list_remove(aio);
+                nni_aio_finish_error(aio, nni_plat_errno(errno));
+                return;
+            }
+        }
 
 		nni_aio_bump_count(aio, n);
 		// We completed the entire operation on this aio.
