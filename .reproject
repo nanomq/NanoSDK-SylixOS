@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="GB2312" standalone="no"?>
+<SylixOSSetting>
+    <BaseSetting Profile="standard" ProjectType="SylixOSSoProject" RealEvoVer="5.0.1 Professional" TlsVersion="default"/>
+    <OutputSetting>
+        <OutputPath Name="Output" Path="Release:Debug" TreeNode="Output"/>
+        <OutputPath Name="Debug" Path="Debug" TreeNode="Debug"/>
+        <OutputPath Name="Release" Path="Release" TreeNode="Release"/>
+    </OutputSetting>
+    <BuildSetting CoustomCfgMakefile="false" NeedReBuild="false" NotScanSourceFile="false"/>
+    <UploadPath>
+        <PairItem key="$(WORKSPACE_NanoSDK)/$(Output)/strip/libNanoSDK.so" value="/lib/libNanoSDK.so"/>
+    </UploadPath>
+    <DeviceSetting DevName="" WorkDir="/apps/NanoSDK"/>
+    <ExtDevNames/>
+</SylixOSSetting>
