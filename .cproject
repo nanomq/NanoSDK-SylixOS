@@ -17,6 +17,7 @@
 		<pathentry kind="mac" name="__GNUC__" path="" value="1"/>
 		<pathentry kind="mac" name="SYLIXOS" path="" value=""/>
 		<pathentry kind="mac" name="__aarch64__" path="" value=""/>
+		<pathentry kind="mac" name="NNG_TLS_ENGINE" path="" value="mbed"/>
 		<pathentry base-ref="NanoSDK" include="src/nng/include" kind="inc" path="" system="true"/>
 		<pathentry base-ref="NanoSDK" include="D:/Projects/NanoSDK-SylixOS-WS/SylixOS-Base/libsqlite3/sqlite3" kind="inc" path="" system="true"/>
 		<pathentry base-ref="NanoSDK" include="D:/Projects/NanoSDK-SylixOS-WS/SylixOS-Base/libsylixos/SylixOS" kind="inc" path="" system="true"/>
