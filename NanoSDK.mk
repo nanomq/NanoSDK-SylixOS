@@ -144,7 +144,8 @@ LOCAL_INC_PATH :=  \
 #*********************************************************************************************************
 # Pre-defined macro (eg. -DYOUR_MARCO=1)
 #*********************************************************************************************************
-LOCAL_DSYMBOL := 
+LOCAL_DSYMBOL :=  \
+-DNNG_TLS_ENGINE=mbed
 
 #*********************************************************************************************************
 # Compiler flags
@@ -156,8 +157,12 @@ LOCAL_LINKFLAGS :=
 #*********************************************************************************************************
 # Depend library (eg. LOCAL_DEPEND_LIB := -la LOCAL_DEPEND_LIB_PATH := -L"Your library search path")
 #*********************************************************************************************************
-LOCAL_DEPEND_LIB := 
-LOCAL_DEPEND_LIB_PATH := 
+LOCAL_DEPEND_LIB :=  \
+-lcextern \
+-l:libsqlite3.a
+LOCAL_DEPEND_LIB_PATH :=  \
+-L"$(SYLIXOS_BASE_PATH)/libcextern/$(Output)" \
+-L"$(SYLIXOS_BASE_PATH)/libsqlite3/$(Output)"
 
 #*********************************************************************************************************
 # C++ config
@@ -191,7 +196,9 @@ LOCAL_POST_STRIP_CMD :=
 #*********************************************************************************************************
 # Depend target
 #*********************************************************************************************************
-LOCAL_DEPEND_TARGET := 
+LOCAL_DEPEND_TARGET :=  \
+$(SYLIXOS_BASE_PATH)/libcextern/$(Output)/libcextern.so \
+$(SYLIXOS_BASE_PATH)/libsqlite3/$(Output)/libsqlite3.a
 
 include $(LIBRARY_MK)
 
