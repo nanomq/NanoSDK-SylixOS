@@ -10,7 +10,7 @@
 
 #include <string.h>
 
-#include "core/nng_impl.h"
+#include "../../../core/nng_impl.h"
 #include "nng/protocol/pubsub0/pub.h"
 
 // Publish protocol.  The PUB protocol simply sends messages out, as

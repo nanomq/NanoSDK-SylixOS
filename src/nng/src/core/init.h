@@ -12,7 +12,7 @@
 #ifndef CORE_INIT_H
 #define CORE_INIT_H
 
-#include "core/nng_impl.h"
+#include "nng_impl.h"
 
 // nni_init is called each time the user enters the library.  It ensures that
 // the library is initlialized properly, and also deals with checks such as

@@ -11,10 +11,10 @@
 #include <stdlib.h>
 #include <string.h>
 
-#include "core/nng_impl.h"
+#include "../../../core/nng_impl.h"
 #include "nng/mqtt/mqtt_client.h"
 #include "nng/supplemental/tls/tls.h"
-#include "supplemental/mqtt/mqtt_msg.h"
+#include "../../../supplemental/mqtt/mqtt_msg.h"
 
 // TLS Over TCP transport.   Platform specific TLS Over TCP operations must be
 // supplied as well.

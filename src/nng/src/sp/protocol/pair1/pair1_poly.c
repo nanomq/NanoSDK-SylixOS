@@ -10,7 +10,7 @@
 
 #include <stdlib.h>
 
-#include "core/nng_impl.h"
+#include "../../../core/nng_impl.h"
 #include "nng/protocol/pair1/pair.h"
 
 // Pair1 poly-amorous mode.  The PAIRv1 protocol is normally a simple 1:1

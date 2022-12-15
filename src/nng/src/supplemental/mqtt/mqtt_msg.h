@@ -12,7 +12,7 @@ extern "C" {
 #include <inttypes.h>
 #endif
 
-#include "core/nng_impl.h"
+#include "../../core/nng_impl.h"
 #include "nng/mqtt/mqtt_client.h"
 #include "nng/nng.h"
 

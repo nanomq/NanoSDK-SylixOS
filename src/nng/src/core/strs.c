@@ -14,7 +14,7 @@
 #include <stdlib.h>
 #include <string.h>
 
-#include "core/nng_impl.h"
+#include "nng_impl.h"
 
 // This file contains implementation of utility functions that are not
 // part of standard C99.  (C11 has added some things here, but we cannot

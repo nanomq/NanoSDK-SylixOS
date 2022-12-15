@@ -12,12 +12,12 @@
 
 #include <string.h>
 
-#include "core/nng_impl.h"
+#include "nng_impl.h"
 #include <nng/supplemental/tls/tls.h>
 
-#include "core/tcp.h"
-#include "supplemental/tls/tls_api.h"
-#include "supplemental/websocket/websocket.h"
+#include "tcp.h"
+#include "../supplemental/tls/tls_api.h"
+#include "../supplemental/websocket/websocket.h"
 
 static struct {
 	const char *scheme;

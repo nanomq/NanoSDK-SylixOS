@@ -14,7 +14,7 @@
 #include <stdlib.h>
 #include <string.h>
 
-#include "core/nng_impl.h"
+#include "../../core/nng_impl.h"
 #include "http_api.h"
 
 // Note that as we parse headers, the rule is that if a header is already

@@ -9,8 +9,8 @@
 // found online at https://opensource.org/licenses/MIT.
 //
 
-#include "core/nng_impl.h"
-#include "supplemental/mqtt/mqtt_msg.h"
+#include "../core/nng_impl.h"
+#include "../supplemental/mqtt/mqtt_msg.h"
 
 #include <stdio.h>
 #include <string.h>

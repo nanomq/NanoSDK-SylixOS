@@ -11,7 +11,7 @@
 
 #include <stdio.h>
 
-#include "core/nng_impl.h"
+#include "../../../core/nng_impl.h"
 
 #include <nng/transport/ipc/ipc.h>
 

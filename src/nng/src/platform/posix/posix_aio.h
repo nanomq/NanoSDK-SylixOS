@@ -17,7 +17,7 @@
 // that is not very performant on many systems.   So we emulate this using
 // one of several possible different backends.
 
-#include "core/nng_impl.h"
+#include "../../core/nng_impl.h"
 #include "posix_pollq.h"
 
 #include <sys/stat.h>  // needed for musl build

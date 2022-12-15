@@ -10,8 +10,8 @@
 #ifndef CORE_TIMER_H
 #define CORE_TIMER_H
 
-#include "core/defs.h"
-#include "core/list.h"
+#include "defs.h"
+#include "list.h"
 
 // For the sake of simplicity, we just maintain a single global timer thread.
 

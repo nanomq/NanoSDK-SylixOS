@@ -13,8 +13,8 @@
 #include <stdbool.h>
 #include <string.h>
 
-#include "core/nng_impl.h"
-#include "supplemental/tls/tls_api.h"
+#include "../../core/nng_impl.h"
+#include "../tls/tls_api.h"
 
 #include "http_api.h"
 

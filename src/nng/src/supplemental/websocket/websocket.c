@@ -13,10 +13,10 @@
 #include <stdlib.h>
 #include <string.h>
 
-#include "core/nng_impl.h"
-#include "supplemental/base64/base64.h"
-#include "supplemental/http/http_api.h"
-#include "supplemental/sha1/sha1.h"
+#include "../../core/nng_impl.h"
+#include "../base64/base64.h"
+#include "../http/http_api.h"
+#include "../sha1/sha1.h"
 
 #include <nng/transport/ws/websocket.h>
 
@@ -167,6 +167,8 @@ struct ws_frame {
 	uint8_t *     buf;
 	nng_aio *     aio;
 };
+
+#if defined(NNG_SUPP_WEBSOCKET)
 
 static void ws_send_close(nni_ws *ws, uint16_t code);
 static void ws_conn_cb(void *);
@@ -2930,3 +2932,6 @@ ws_str_get(void *arg, const char *nm, void *buf, size_t *szp, nni_type t)
 	}
 	return (rv);
 }
+
+#endif
+

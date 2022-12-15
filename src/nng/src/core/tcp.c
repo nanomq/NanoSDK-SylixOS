@@ -14,8 +14,8 @@
 
 #include <nng/nng.h>
 
-#include "core/nng_impl.h"
-#include "core/tcp.h"
+#include "nng_impl.h"
+#include "tcp.h"
 
 typedef struct {
 	nng_stream_dialer ops;

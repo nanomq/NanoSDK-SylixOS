@@ -32,7 +32,7 @@
 #define NNG_PLATFORM_POSIX_SOCKADDR
 #define NNG_PLATFORM_POSIX_UDP
 
-#include "platform/posix/posix_config.h"
+#include "posix_config.h"
 #endif
 
 #ifdef NNG_PLATFORM_POSIX_SOCKADDR

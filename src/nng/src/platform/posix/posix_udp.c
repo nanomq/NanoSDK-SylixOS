@@ -8,10 +8,10 @@
 // found online at https://opensource.org/licenses/MIT.
 //
 
-#include "core/nng_impl.h"
+#include "../../core/nng_impl.h"
 
 #ifdef NNG_PLATFORM_POSIX
-#include "platform/posix/posix_pollq.h"
+#include "posix_pollq.h"
 
 #include <errno.h>
 #include <fcntl.h>

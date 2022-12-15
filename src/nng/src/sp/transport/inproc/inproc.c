@@ -11,7 +11,7 @@
 
 #include <string.h>
 
-#include "core/nng_impl.h"
+#include "../../../core/nng_impl.h"
 
 // Inproc transport.  This just transports messages from one
 // peer to another.  The inproc transport is only valid within the same

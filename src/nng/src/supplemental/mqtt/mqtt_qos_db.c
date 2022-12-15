@@ -1,8 +1,8 @@
 #include "mqtt_qos_db.h"
-#include "core/nng_impl.h"
+#include "../../core/nng_impl.h"
 #include "nng/nng.h"
-#include "supplemental/sqlite/sqlite3.h"
-#include "supplemental/mqtt/mqtt_msg.h"
+#include "sqlite3.h"
+#include "../../supplemental/mqtt/mqtt_msg.h"
 #include <string.h>
 #include <stdlib.h>
 #include <stdio.h>

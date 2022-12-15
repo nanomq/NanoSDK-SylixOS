@@ -20,7 +20,7 @@
 #include <sys/eventfd.h>
 #include <unistd.h>
 
-#include "core/nng_impl.h"
+#include "../../core/nng_impl.h"
 #include "platform/posix/posix_pollq.h"
 
 typedef struct nni_posix_pollq nni_posix_pollq;

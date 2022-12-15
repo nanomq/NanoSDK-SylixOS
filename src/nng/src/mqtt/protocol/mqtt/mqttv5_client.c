@@ -7,10 +7,10 @@
 // found online at https://opensource.org/licenses/MIT.
 //
 
-#include "core/nng_impl.h"
+#include "../../../core/nng_impl.h"
 #include "sqlite_handler.h"
-#include "supplemental/mqtt/mqtt_msg.h"
-#include "supplemental/mqtt/mqtt_qos_db_api.h"
+#include "../../../supplemental/mqtt/mqtt_msg.h"
+#include "../../../supplemental/mqtt/mqtt_qos_db_api.h"
 
 // MQTT client implementation.
 //

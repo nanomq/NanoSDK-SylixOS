@@ -12,7 +12,7 @@
 #ifndef NNG_SUPPLEMENTAL_HTTP_HTTP_API_H
 #define NNG_SUPPLEMENTAL_HTTP_HTTP_API_H
 
-#include "core/nng_impl.h"
+#include "../../core/nng_impl.h"
 #include <nng/supplemental/http/http.h>
 #include <nng/supplemental/tls/tls.h>
 

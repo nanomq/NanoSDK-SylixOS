@@ -14,7 +14,7 @@
 #include <sys/types.h>
 #include <unistd.h>
 
-#include "core/nng_impl.h"
+#include "../../core/nng_impl.h"
 
 // The historic /dev/urandom device.  This is not as a good as
 // a system call, since file descriptor attacks are possible,  and it may

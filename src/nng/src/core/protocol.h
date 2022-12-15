@@ -11,7 +11,7 @@
 #ifndef CORE_PROTOCOL_H
 #define CORE_PROTOCOL_H
 
-#include "core/options.h"
+#include "options.h"
 
 // Protocol implementation details.  Protocols must implement the
 // interfaces in this file.  Note that implementing new protocols is

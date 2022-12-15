@@ -13,8 +13,8 @@
 #include <stdio.h>
 #include <string.h>
 
-#include "core/nng_impl.h"
-#include "supplemental/websocket/websocket.h"
+#include "../../../core/nng_impl.h"
+#include "../../../supplemental/websocket/websocket.h"
 
 #include <nng/supplemental/tls/tls.h>
 #include <nng/transport/ws/websocket.h>

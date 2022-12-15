@@ -11,8 +11,8 @@
 #ifndef CORE_TASKQ_H
 #define CORE_TASKQ_H
 
-#include "core/defs.h"
-#include "core/list.h"
+#include "defs.h"
+#include "list.h"
 
 typedef struct nni_taskq nni_taskq;
 typedef struct nni_task  nni_task;

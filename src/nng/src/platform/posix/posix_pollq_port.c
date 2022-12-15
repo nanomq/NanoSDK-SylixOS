@@ -19,7 +19,7 @@
 #include <string.h> /* for strerror() */
 #include <unistd.h>
 
-#include "core/nng_impl.h"
+#include "../../core/nng_impl.h"
 #include "platform/posix/posix_pollq.h"
 
 #define NNI_MAX_PORTEV 64

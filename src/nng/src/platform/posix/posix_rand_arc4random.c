@@ -11,7 +11,7 @@
 // on any platform where it is found.
 #include <stdlib.h>
 
-#include "core/nng_impl.h"
+#include "../../core/nng_impl.h"
 
 #ifdef NNG_HAVE_ARC4RANDOM
 

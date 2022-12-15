@@ -13,7 +13,7 @@
 #include <stdlib.h>
 #include <string.h>
 
-#include "core/nng_impl.h"
+#include "../../core/nng_impl.h"
 
 #include <nng/supplemental/tls/engine.h>
 #include <nng/supplemental/tls/tls.h>

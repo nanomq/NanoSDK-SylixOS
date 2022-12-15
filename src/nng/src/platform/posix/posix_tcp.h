@@ -12,9 +12,9 @@
 #ifndef PLATFORM_POSIX_TCP_H
 #define PLATFORM_POSIX_TCP_H
 
-#include "core/nng_impl.h"
+#include "../../core/nng_impl.h"
 
-#include "platform/posix/posix_aio.h"
+#include "posix_aio.h"
 
 struct nni_tcp_conn {
 	nng_stream      stream;

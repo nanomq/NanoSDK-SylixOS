@@ -8,8 +8,8 @@
 // found online at https://opensource.org/licenses/MIT.
 //
 
-#include "core/nng_impl.h"
-#include "platform/posix/posix_pollq.h"
+#include "../../core/nng_impl.h"
+#include "posix_pollq.h"
 
 #include <errno.h>
 #include <fcntl.h>

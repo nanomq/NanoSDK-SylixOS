@@ -11,7 +11,7 @@
 #include <stdbool.h>
 #include <stdlib.h>
 
-#include "core/nng_impl.h"
+#include "../../../core/nng_impl.h"
 #include "nng/protocol/bus0/bus.h"
 #include <stdio.h>
 

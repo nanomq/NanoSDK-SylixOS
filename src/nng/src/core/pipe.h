@@ -15,9 +15,9 @@
 // OUTSIDE of the core is STRICTLY VERBOTEN.  NO DIRECT ACCESS BY PROTOCOLS OR
 // TRANSPORTS.
 
-#include "core/defs.h"
-#include "core/thread.h"
-#include "sp/transport.h"
+#include "defs.h"
+#include "thread.h"
+#include "../sp/transport.h"
 
 // AIO
 extern void nni_pipe_recv(nni_pipe *, nni_aio *);

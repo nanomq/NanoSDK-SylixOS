@@ -10,8 +10,8 @@
 #ifndef CORE_POLLABLE_H
 #define CORE_POLLABLE_H
 
-#include "core/defs.h"
-#include "core/list.h"
+#include "defs.h"
+#include "list.h"
 
 typedef struct nni_pollable nni_pollable;
 

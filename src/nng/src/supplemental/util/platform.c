@@ -11,7 +11,7 @@
 #include <stdlib.h>
 #include <string.h>
 
-#include "core/nng_impl.h"
+#include "../../core/nng_impl.h"
 #include "nng/supplemental/util/platform.h"
 
 nng_time

@@ -8,10 +8,12 @@
 // found online at https://opensource.org/licenses/MIT.
 //
 
-#include "core/nng_impl.h"
+#include "../../core/nng_impl.h"
 
 // This stub file exists to support configuration of the stream subsystem
 // when websocket support is unconfigured.
+
+#if !defined(NNG_SUPP_WEBSOCKET)
 
 int
 nni_ws_dialer_alloc(nng_stream_dialer **dp, const nng_url *url)
@@ -38,3 +40,6 @@ nni_ws_checkopt(const char *name, const void *data, size_t sz, nni_type t)
 	NNI_ARG_UNUSED(t);
 	return (NNG_ENOTSUP);
 }
+
+#endif
+

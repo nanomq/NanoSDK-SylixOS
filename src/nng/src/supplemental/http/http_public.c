@@ -8,7 +8,7 @@
 // found online at https://opensource.org/licenses/MIT.
 //
 
-#include "core/nng_impl.h"
+#include "../../core/nng_impl.h"
 #include "http_api.h"
 #include "nng/supplemental/http/http.h"
 #include "nng/supplemental/tls/tls.h"

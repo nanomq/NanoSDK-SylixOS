@@ -8,7 +8,7 @@
 // found online at https://opensource.org/licenses/MIT.
 //
 
-#include "core/nng_impl.h"
+#include "nng_impl.h"
 
 // We pack the wfd and rfd into a uint64_t so that we can update the pair
 // atomically and use nni_atomic_cas64, to be lock free.

@@ -553,9 +553,9 @@ extern char *nni_plat_getcwd(char *, size_t );
 // Actual platforms we support.  This is included up front so that we can
 // get the specific types that are supplied by the platform.
 #if defined(NNG_PLATFORM_POSIX)
-#include "platform/posix/posix_impl.h"
+#include "../platform/posix/posix_impl.h"
 #elif defined(NNG_PLATFORM_WINDOWS)
-#include "platform/windows/win_impl.h"
+#include "../platform/windows/win_impl.h"
 #else
 #error "unknown platform"
 #endif

@@ -12,7 +12,7 @@
 #ifndef PROTOCOL_MQTT_TRANSPORT_H
 #define PROTOCOL_MQTT_TRANSPORT_H
 
-#include "core/options.h"
+#include "../core/options.h"
 
 // These APIs are used by the framework internally, and not for use by
 // transport implementations.

@@ -10,7 +10,7 @@
 
 #include <string.h>
 
-#include "core/nng_impl.h"
+#include "../../../core/nng_impl.h"
 #include "nng/protocol/reqrep0/rep.h"
 
 // Response protocol.  The REP protocol is the "reply" side of a

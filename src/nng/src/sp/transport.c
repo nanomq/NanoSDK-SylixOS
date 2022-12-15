@@ -9,7 +9,7 @@
 // found online at https://opensource.org/licenses/MIT.
 //
 
-#include "core/nng_impl.h"
+#include "../core/nng_impl.h"
 
 #include <stdio.h>
 #include <string.h>

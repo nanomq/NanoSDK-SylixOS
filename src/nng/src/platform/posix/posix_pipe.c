@@ -8,7 +8,7 @@
 //
 
 // POSIX pipes.
-#include "core/nng_impl.h"
+#include "../../core/nng_impl.h"
 
 #ifdef NNG_PLATFORM_POSIX
 

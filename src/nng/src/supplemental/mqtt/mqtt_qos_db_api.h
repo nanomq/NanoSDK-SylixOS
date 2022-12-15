@@ -2,7 +2,7 @@
 #define NNG_MQTT_QOS_DB_API_H
 
 #include "nng/nng.h"
-#include "core/nng_impl.h"
+#include "../../core/nng_impl.h"
 #include "mqtt_qos_db.h"
 
 #define nni_qos_db_init_sqlite(db, user_path, db_name, is_broker) \

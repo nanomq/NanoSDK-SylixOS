@@ -17,7 +17,7 @@
 
 #include <sys/random.h>
 
-#include "core/nng_impl.h"
+#include "../../core/nng_impl.h"
 
 #ifdef NNG_HAVE_GETRANDOM
 

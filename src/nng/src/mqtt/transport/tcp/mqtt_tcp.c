@@ -11,10 +11,10 @@
 #include <stdlib.h>
 #include <string.h>
 
-#include "core/nng_impl.h"
-#include "core/sockimpl.h"
+#include "../../../core/nng_impl.h"
+#include "../../../core/sockimpl.h"
 #include "nng/mqtt/mqtt_client.h"
-#include "supplemental/mqtt/mqtt_msg.h"
+#include "../../../supplemental/mqtt/mqtt_msg.h"
 
 // TCP transport.   Platform specific TCP operations must be
 // supplied as well.

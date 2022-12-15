@@ -1,9 +1,9 @@
 #ifndef NNG_MQTT_QOS_DB_H
 #define NNG_MQTT_QOS_DB_H
 
-#include "core/nng_impl.h"
+#include "../../core/nng_impl.h"
 #include "nng/nng.h"
-#include "supplemental/sqlite/sqlite3.h"
+#include "sqlite3.h"
 
 
 /**

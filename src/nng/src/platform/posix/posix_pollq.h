@@ -19,7 +19,7 @@
 // that is not very performant on many systems.   So we emulate this using
 // one of several possible different backends.
 
-#include "core/nng_impl.h"
+#include "../../core/nng_impl.h"
 #include <poll.h>
 
 typedef struct nni_posix_pfd nni_posix_pfd;

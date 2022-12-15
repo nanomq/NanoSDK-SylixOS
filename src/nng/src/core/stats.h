@@ -11,7 +11,7 @@
 #ifndef CORE_STATS_H
 #define CORE_STATS_H
 
-#include "core/defs.h"
+#include "defs.h"
 
 // Statistics support.  This is inspired in part by the Solaris
 // kernel stats framework, but we've simplified and tuned it for our use.

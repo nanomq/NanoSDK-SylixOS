@@ -10,7 +10,7 @@
 
 #include <stdlib.h>
 
-#include "core/nng_impl.h"
+#include "../../../core/nng_impl.h"
 #include "nng/protocol/pipeline0/push.h"
 
 // Push protocol.  The PUSH protocol is the "write" side of a pipeline.
