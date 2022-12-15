@@ -6,8 +6,10 @@
         <OutputPath Name="Debug" Path="Debug" TreeNode="Debug"/>
         <OutputPath Name="Release" Path="Release" TreeNode="Release"/>
     </OutputSetting>
-    <BuildSetting CoustomCfgMakefile="false" NotScanSourceFile="false"/>
+    <BuildSetting CoustomCfgMakefile="false" NeedReBuild="false" NotScanSourceFile="false"/>
     <UploadPath>
         <PairItem key="$(WORKSPACE_NanoSDK)/$(Output)/strip/libNanoSDK.so" value="/lib/libNanoSDK.so"/>
     </UploadPath>
+    <DeviceSetting DevName="" WorkDir="/apps/NanoSDK"/>
+    <ExtDevNames/>
 </SylixOSSetting>
