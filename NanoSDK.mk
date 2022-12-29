@@ -145,7 +145,12 @@ LOCAL_INC_PATH :=  \
 # Pre-defined macro (eg. -DYOUR_MARCO=1)
 #*********************************************************************************************************
 LOCAL_DSYMBOL :=  \
--DNNG_TLS_ENGINE=mbed
+-DNNG_TLS_ENGINE=mbed \
+-DNNG_HAVE_STDATOMIC=1 \
+-DNNG_HAVE_EVENTFD=1 \
+-DNNG_HAVE_GETRANDOM=1 \
+-DNNG_HAVE_PTHREAD_SETNAME_NP=1 \
+-DNNG_SETSTACKSIZE=1
 
 #*********************************************************************************************************
 # Compiler flags
