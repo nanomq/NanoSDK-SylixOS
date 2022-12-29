@@ -7,6 +7,8 @@
 // found online at https://opensource.org/licenses/MIT.
 //
 
+#if !defined(NNG_HAVE_GETRANDOM) && !defined(NNG_HAVE_ARC4RANDOM)
+
 #include <fcntl.h>
 #include <pthread.h>
 #include <stdint.h>
@@ -56,3 +58,5 @@ nni_random(void)
 	}
 	return (val);
 }
+
+#endif
