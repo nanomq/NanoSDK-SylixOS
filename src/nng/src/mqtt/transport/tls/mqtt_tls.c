@@ -34,6 +34,7 @@ struct mqtts_tcptran_pipe {
 	uint16_t          keepalive;
 	uint16_t          sndmax; // MQTT Receive Maximum (QoS 1/2 packet)
 	uint8_t           qosmax;
+	uint8_t           pingcnt; // pingreq counter
 	size_t            rcvmax;
 	bool              closed;
 	nni_list_node     node;
@@ -131,6 +132,10 @@ mqtts_pipe_timer_cb(void *arg)
 	if (nng_aio_result(&p->tmaio) != 0) {
 		return;
 	}
+	if (p->pingcnt > 1) {
+		mqtt_tcptran_pipe_close(p);
+		return;
+	}
 	nni_mtx_lock(&p->mtx);
 	if (!p->busy && !nni_aio_busy(p->qsaio)) {
 		// send pingreq
@@ -144,6 +149,7 @@ mqtts_pipe_timer_cb(void *arg)
 		p->busy = true;
 		nni_aio_set_iov(p->qsaio, 1, &iov);
 		nng_stream_send(p->conn, p->qsaio);
+		p->pingcnt ++;
 	}
 	nni_mtx_unlock(&p->mtx);
 	nni_sleep_aio(p->keepalive, &p->tmaio);
@@ -191,6 +197,7 @@ mqtts_tcptran_pipe_init(void *arg, nni_pipe *npipe)
 	p->packmax = 0xFFFF;
 	p->qosmax  = 2;
 	p->busy = false;
+	p->pingcnt = 0;
 	nni_sleep_aio(p->keepalive, &p->tmaio);
 	return (0);
 }
@@ -772,6 +779,7 @@ mqtts_tcptran_pipe_recv_cb(void *arg)
 		mqtts_tcptran_pipe_recv_start(p);
 	}
 	nni_aio_set_msg(aio, msg);
+	p->pingcnt = 0;
 	nni_mtx_unlock(&p->mtx);
 
 	nni_aio_finish_sync(aio, 0, n);
@@ -844,8 +852,8 @@ mqtts_tcptran_pipe_send_start(mqtts_tcptran_pipe *p)
 			if (qos > 0)
 				p->sndmax --;
 			if (qos > p->qosmax) {
-				p->qosmax == 1? (*header &= 0XF9) & (*header |= 0X02):*header;
-				p->qosmax == 0? *header &= 0XF9:*header;
+				p->qosmax == 1 ? ((*header &= 0XF9), (*header |= 0X02)) : NNI_ARG_UNUSED(*header);
+				p->qosmax == 0 ? *header &= 0XF9 : NNI_ARG_UNUSED(*header);
 			}
 
 		}
