@@ -180,6 +180,7 @@ net_recv(void *tls, unsigned char *buf, size_t len)
 static void
 conn_fini(nng_tls_engine_conn *ec)
 {
+	mbedtls_mutex_free( &mbedtls_threading_gmtime_mutex );
 	mbedtls_ssl_free(&ec->ctx);
 }
 
