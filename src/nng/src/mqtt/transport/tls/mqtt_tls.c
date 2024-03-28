@@ -133,7 +133,7 @@ mqtts_pipe_timer_cb(void *arg)
 		return;
 	}
 	if (p->pingcnt > 1) {
-		mqtt_tcptran_pipe_close(p);
+		mqtts_tcptran_pipe_close(p);
 		return;
 	}
 	nni_mtx_lock(&p->mtx);

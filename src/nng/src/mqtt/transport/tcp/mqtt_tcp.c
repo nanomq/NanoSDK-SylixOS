@@ -156,7 +156,6 @@ mqtt_pipe_timer_cb(void *arg)
 		return;
 	}
 	// send PINGREQ with tmaio itself?
-	// nng_msleep(p->keepalive);
 	nni_mtx_lock(&p->mtx);
 	if (!p->busy && !nni_aio_busy(p->qsaio)) {
 		// send pingreq
@@ -395,7 +394,7 @@ mqtt_tcptran_pipe_nego_cb(void *arg)
 				goto mqtt_error;
 			property_free(ep->property);
 			property *prop = (void *)nni_mqtt_msg_get_connack_property(p->rxmsg);
-			property_dup(&ep->property, prop);
+			property_dup((property **)&ep->property, prop);
 			property_data *data;
 			data = property_get_value(ep->property, RECEIVE_MAXIMUM);
 			if (data) {
